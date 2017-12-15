@@ -1,0 +1,4 @@
+# Copy & Rename this file to local_env.yml
+# Replace ~ with appropriate values.
+# Use rake secret to generate keys.
+SECRET_KEY_BASE: '~'
