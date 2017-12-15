@@ -2,3 +2,9 @@
 # Replace ~ with appropriate values.
 # Use rake secret to generate keys.
 SECRET_KEY_BASE: '~'
+
+# E-school/Home Access Center (HAC) credentials
+HAC_URL: '~'
+HAC_SCHOOL: '~'
+HAC_USERNAME: '~'
+HAC_PASSWORD: '~'
