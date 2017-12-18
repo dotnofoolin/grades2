@@ -22,10 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-
-
-unique index certain fields
-Add rufus scheduler
-Finish readme
-Deploy to server
