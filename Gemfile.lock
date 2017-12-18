@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/dotnofoolin/hac_adapter.git
-  revision: 700f438b6255e7a4e82fb0532acd4b03d079d5d2
+  revision: c6e6dc4b7095d6c67f46d5933b6142319d63ae15
   specs:
-    hac_adapter (1.0.0)
+    hac_adapter (1.0.1)
       mechanize
       terminal-table
 
@@ -206,7 +206,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  hac_adapter!
+  hac_adapter (= 1.0.1)!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
