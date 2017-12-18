@@ -69,4 +69,12 @@ RSpec.configure do |config|
     c.cassette_library_dir = './spec/cassettes'
     c.hook_into :webmock
   end
+
+  def reset_env_vars
+    # Don't commit your credentials!!!
+    ENV['HAC_URL'] = 'https://hac31.eschoolplus.k12.ar.us'
+    ENV['HAC_SCHOOL'] = 'Little Rock School District'
+    ENV['HAC_USERNAME'] = 'some_username'
+    ENV['HAC_PASSWORD'] = 'some_password'
+  end
 end
