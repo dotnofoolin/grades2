@@ -9,6 +9,7 @@ gem 'webpacker'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'hac_adapter', '1.0.1', git: 'https://github.com/dotnofoolin/hac_adapter.git'
+gem 'rufus-scheduler'
 
 group :test do
   gem 'rspec-rails'
