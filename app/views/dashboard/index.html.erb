@@ -3,31 +3,29 @@
     <h1 class="title">Grades Dashboard</h1>
   </div>
   <div class="container">
-    <hr />
-    <h2 class="subtitle"><strong>Student name</strong></h2>
-    <table class="table is-fullwidth">
-      <thead>
-        <tr>
-          <th>Course</th>
-          <th>Average</th>
-          <th>Grade</th>
-          <th>Last Update</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>English</td>
-          <td>95.45</td>
-          <td>A</td>
-          <td>12/12/2017</td>
-        </tr>
-        <tr>
-          <td>English</td>
-          <td>95.45</td>
-          <td>A</td>
-          <td>12/12/2017</td>
-        </tr>
-      </tbody>
-    </table>
+    <% @students.each do |student| %>
+      <hr />
+      <h2 class="subtitle"><strong><%= student.name %></strong></h2>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Average</th>
+            <th>Grade</th>
+            <th>Last Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% student.courses.each do |course| %>
+            <tr>
+              <td><%= course.name %></td>
+              <td><%= course.average %></td>
+              <td><%= course.grade %></td>
+              <td><%= course.last_update_formatted %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </section>
