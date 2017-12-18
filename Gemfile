@@ -12,6 +12,9 @@ gem 'hac_adapter', '1.0.1', git: 'https://github.com/dotnofoolin/hac_adapter.git
 
 group :test do
   gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'simplecov'
 end
 
 group :development, :test do
