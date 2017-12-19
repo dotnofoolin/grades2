@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Course, type: :model do
-  # TODO: Setup fabricator/fixture/FactoryGirl, etc
-  let(:course) { Course.create(student_id: 1, name: 'Some class', average: 100.00, last_update: Time.now) }
+  let(:course) { Fabricate(:course) }
 
   describe '#grade' do
     subject {
@@ -10,6 +9,10 @@ RSpec.describe Course, type: :model do
     }
 
     describe 'when expecting an A' do
+      before do
+        course.update(average: 95.00)
+      end
+
       it { expect(subject).to eq('A') }
     end
 
