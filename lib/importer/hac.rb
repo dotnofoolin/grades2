@@ -11,7 +11,7 @@ module Importer
     end
 
     def import
-      Rails.logger.info '---- Starting HAC import ----'
+      Rails.logger.info "#{Time.now} ---- Starting HAC import ----"
       get_data
       raise NilResultsError, 'Data from HAC is nil!' if data.blank?
 
@@ -38,7 +38,7 @@ module Importer
         end
       end
 
-      Rails.logger.info '---- Finished HAC import ----'
+      Rails.logger.info "#{Time.now} ---- Finished HAC import ----"
       self
     end
 

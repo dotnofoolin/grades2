@@ -64,6 +64,9 @@ GEM
     et-orbi (1.0.8)
       tzinfo
     execjs (2.7.0)
+    fabrication (2.18.0)
+    faker (1.8.5)
+      i18n (~> 0.9.1)
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -229,6 +232,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  fabrication
+  faker
   hac_adapter (= 1.0.1)!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
