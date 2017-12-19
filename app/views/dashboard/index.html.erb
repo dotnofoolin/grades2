@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <% student.courses.each do |course| %>
+          <% student.courses_for_dashboard.each do |course| %>
             <tr>
               <td><%= course.name %></td>
               <td><%= course.average %></td>
