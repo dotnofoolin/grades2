@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -13,6 +8,17 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
+gem 'hac_adapter', '1.0.1', git: 'https://github.com/dotnofoolin/hac_adapter.git'
+gem 'rufus-scheduler'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'simplecov'
+  gem 'fabrication'
+  gem 'faker'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -27,6 +33,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

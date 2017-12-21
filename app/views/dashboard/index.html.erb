@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Grades Dashboard</h1>
+  </div>
+  <div class="container">
+    <% @students.each do |student| %>
+      <hr />
+      <h2 class="subtitle"><strong><%= student.name %></strong></h2>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Average</th>
+            <th>Grade</th>
+            <th>Last Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% student.courses_for_dashboard.each do |course| %>
+            <tr>
+              <td><%= course.name %></td>
+              <td><%= course.average %></td>
+              <td><%= course.grade %></td>
+              <td><%= course.last_update_formatted %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</section>
