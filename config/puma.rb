@@ -9,8 +9,7 @@ if rails_env == 'production'
   environment 'production'
   app_dir = File.expand_path("../..", __FILE__)
   stdout_redirect "#{app_dir}/log/puma.log", "#{app_dir}/log/puma.log", true
-  #bind "unix://#{app_dir}/tmp/puma/puma.sock?umask=0111"
-  bind "unix:///tmp/puma.sock?umask=0111"
+  bind "unix://#{app_dir}/tmp/puma/puma.sock?umask=0111"
   pidfile "#{app_dir}/tmp/puma/pids/puma.pid"
   state_path "#{app_dir}/tmp/puma/state"
   activate_control_app
