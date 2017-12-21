@@ -10,6 +10,7 @@ A key component is the [hac_adapter](https://github.com/dotnofoolin/hac_adapter)
 * PostgreSQL is the database of choice.
 * Assets are managed with webpacker.
 * Bulma is the CSS framework for now.
+* rufus-scheduler gem is used to run the importer process twice a day. It's configured with `config/initializers/scheduler.rb`
 
 ## Development
 
