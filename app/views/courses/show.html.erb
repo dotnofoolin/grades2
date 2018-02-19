@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title"><%= @course.name %></h1>
+        <p>
+          <h2 class="subtitle"><strong><%= @course.student.name %></strong> - Average: <%= @course.average %> (<%= @course.grade %>) - Last Update: <%= @course.last_update_formatted %></h2>
+        </p>
+      </div>
+      <div class="column">
+        <a href="/" class="button is-primary is-pulled-right">Back To Dashboard</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Assignment</th>
+          <th>Due Date</th>
+          <th>Date Assigned</th>
+          <th>Category</th>
+          <th>Score</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @course.assignments.each do |assignment| %>
+          <tr>
+            <td><%= assignment.name %></td>
+            <td><%= assignment.due_date_formatted %></td>
+            <td><%= assignment.date_assigned_formatted %></td>
+            <td><%= assignment.category %></td>
+            <td><%= assignment.score %></td>
+            <td><%= assignment.total_points %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
