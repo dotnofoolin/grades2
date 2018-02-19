@@ -25,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @course.assignments.each do |assignment| %>
+        <% @course.assignments.order('due_date DESC').each do |assignment| %>
           <tr>
             <td><%= assignment.name %></td>
             <td><%= assignment.due_date_formatted %></td>
