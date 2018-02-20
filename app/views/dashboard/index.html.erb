@@ -6,7 +6,7 @@
     <% @students.each do |student| %>
       <hr />
       <h2 class="subtitle"><strong><%= student.name %></strong></h2>
-      <table class="table is-fullwidth">
+      <table class="table is-fullwidth is-hoverable">
         <thead>
           <tr>
             <th>Course</th>
@@ -18,7 +18,7 @@
         <tbody>
           <% student.courses_for_dashboard.each do |course| %>
             <tr>
-              <td><%= course.name %></td>
+              <td><%= link_to course.name, course_path(course) %></td>
               <td><%= course.average %></td>
               <td><%= course.grade %></td>
               <td><%= course.last_update_formatted %></td>
