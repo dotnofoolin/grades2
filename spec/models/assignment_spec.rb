@@ -18,4 +18,80 @@ RSpec.describe Assignment, type: :model do
 
     it { expect(subject).to be_an_instance_of(String) }
   end
+
+  describe '#average' do
+    subject {
+      assignment.average
+    }
+
+    describe 'when total_points is greater than 0' do
+      before do
+        assignment.update(score: 50.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to be_an_instance_of(Float) }
+
+      it 'should return valid average' do
+        expect(subject).to eq(50.0)
+      end
+    end
+
+    describe 'when total_points is 0' do
+      before do
+        assignment.update(score: 50.0, total_points: 0)
+      end
+
+      it { expect(subject).to be_an_instance_of(Float) }
+
+      it 'should return valid average' do
+        expect(subject).to eq(100.0)
+      end
+    end
+  end
+
+  describe '#grade' do
+    subject {
+      assignment.grade
+    }
+
+    describe 'when expecting an A' do
+      before do
+        assignment.update(score: 90.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to eq('A') }
+    end
+
+    describe 'when expecting a B' do
+      before do
+        assignment.update(score: 80.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to eq('B') }
+    end
+
+    describe 'when expecting a C' do
+      before do
+        assignment.update(score: 70.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to eq('C') }
+    end
+
+    describe 'when expecting a D' do
+      before do
+        assignment.update(score: 60.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to eq('D') }
+    end
+
+    describe 'when expecting a F' do
+      before do
+        assignment.update(score: 50.0, total_points: 100.0)
+      end
+
+      it { expect(subject).to eq('F') }
+    end
+  end
 end
