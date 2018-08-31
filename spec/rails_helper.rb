@@ -73,7 +73,7 @@ RSpec.configure do |config|
 
   def reset_env_vars
     # Don't commit your credentials!!!
-    ENV['HAC_URL'] = 'https://hac31.eschoolplus.k12.ar.us'
+    ENV['HAC_URL'] = 'https://hac40.esp.k12.ar.us/HomeAccess40'
     ENV['HAC_SCHOOL'] = 'Little Rock School District'
     ENV['HAC_USERNAME'] = 'some_username'
     ENV['HAC_PASSWORD'] = 'some_password'
