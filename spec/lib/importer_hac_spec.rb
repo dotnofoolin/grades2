@@ -79,6 +79,7 @@ RSpec.describe Importer::Hac do
     end
 
     describe 'when errors occur' do
+      # When re-recording this cassette, make sure to use a crap user/pass combo in rails_helper.
       let(:cassette) { 'hac_all_reports_error' }
 
       it 'raises error' do
