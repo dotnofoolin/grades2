@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.2'
 gem 'pg', '~> 0.18'
 gem 'puma'
-gem 'sass-rails'
+gem 'sassc-rails', '~> 2.1.0'
 gem 'uglifier'
 gem 'webpacker'
 # gem 'redis', '~> 3.0'
