@@ -1,14 +1,25 @@
 <section class="section">
   <div class="container">
+    <div class="columns is-hidden-tablet is-hidden-desktop">
+      <div class="column">
+        <a href="/" class="button is-primary">Back To Dashboard</a>
+      </div>
+    </div>
+
+    <div class="columns is-mobile">
+      <div class="column">
+        <h1 class="title"><%= @course.student.name %></h1>
+      </div>
+      <div class="column">
+        <a href="/" class="button is-primary is-pulled-right is-hidden-mobile">Back To Dashboard</a>
+      </div>
+    </div>
+
     <div class="columns">
       <div class="column">
-        <h1 class="title"><%= @course.name %></h1>
-        <p>
-          <h2 class="subtitle"><strong><%= @course.student.name %></strong> - Average: <%= @course.average %> (<%= @course.grade %>) - Last Update: <%= @course.last_update_formatted %></h2>
-        </p>
-        <p>
-          <a href="/" class="button is-primary">Back To Dashboard</a>
-        </p>
+          <h2 class="title"><%= @course.name %></h2>
+          <h2 class="subtitle">Average: <%= @course.average %> (<%= @course.grade %>) - Last Update: <%= @course.last_update_formatted %></h2>
+          <progress class="progress <%= @course.health_bar_color_class %> is-large" value="<%= @course.average %>" max="100"><%= @course.average %></progress>
       </div>
     </div>
   </div>
