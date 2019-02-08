@@ -12,6 +12,7 @@
             <th>Course</th>
             <th>Average</th>
             <th>Grade</th>
+            <th>Grade Health</th>
             <th>Last Update</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@
               <td><%= link_to course.name, course_path(course) %></td>
               <td><%= course.average %></td>
               <td><%= course.grade %></td>
+              <td><progress class="progress <%= course.health_bar_color_class %> is-large" value="<%= course.average %>" max="100"><%= course.average %></progress></td>
               <td><%= course.last_update_formatted %></td>
             </tr>
           <% end %>
