@@ -2,11 +2,12 @@
   "name": "grades2",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.5.5",
+    "@rails/webpacker": "^4.0.7",
     "bulma": "^0.7.2",
-    "coffeescript": "1.12.7"
+    "coffeescript": "1.12.7",
+    "postcss-cssnext": "^3.1.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.8.0"
   }
 }
