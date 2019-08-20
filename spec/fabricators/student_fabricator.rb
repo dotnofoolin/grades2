@@ -1,5 +1,5 @@
 Fabricator(:student) do
-  student_id { Faker::Number.number(6) }
+  student_id { Faker::Number.number(digits: 6) }
   name { Faker::Name.name }
 end
 

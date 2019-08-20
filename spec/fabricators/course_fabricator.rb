@@ -1,7 +1,7 @@
 Fabricator(:course) do
   student
   name { Faker::Educator.course }
-  average { Faker::Number.between(0.00, 100.00) }
+  average { Faker::Number.within(range: 0..100) }
   last_update { Time.now }
 end
 
