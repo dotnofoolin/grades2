@@ -13,7 +13,7 @@ RSpec.describe CoursesController, type: :controller do
     end
 
     it 'responds to html by default' do
-      expect(response.content_type).to eq 'text/html'
+      expect(response.media_type).to eq 'text/html'
     end
   end
 end
