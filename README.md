@@ -17,6 +17,10 @@ A key component is the [hac_adapter](https://github.com/dotnofoolin/hac_adapter)
 * Copy config/local_env.yml.example to config/local_env.yml. Enter your credentials. The URL can be picky. This format works best: https://hac40.esp.k12.ar.us/HomeAccess40
 * Configure your database in config/database.yml
 
+## Dockerizing the app
+
+See [DOCKER](DOCKER.md)
+
 ## Development
 
 After checking out the repo, run `bundle install` to install dependencies. Setup the datbase. Then, run `rspec` to run the tests.
