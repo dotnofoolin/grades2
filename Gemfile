@@ -9,6 +9,7 @@ gem 'webpacker'
 # gem 'redis', '~> 3.0'
 gem 'hac_adapter', '1.1.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
 gem 'rufus-scheduler'
+gem 'dotenv-rails'
 
 group :test do
   gem 'rspec-rails', '~> 4.0.0.beta2' # TODO: come back and remove the version lock. See: https://github.com/rails/rails/issues/35417
@@ -22,7 +23,6 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails'
 end
 
 group :development do
