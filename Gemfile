@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 6.0.0'
 gem 'pg', '~> 0.18'
 gem 'puma'
 gem 'sass-rails'
@@ -9,9 +9,10 @@ gem 'webpacker'
 # gem 'redis', '~> 3.0'
 gem 'hac_adapter', '1.1.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
 gem 'rufus-scheduler'
+gem 'dotenv-rails'
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 4.0.0.beta2' # TODO: come back and remove the version lock. See: https://github.com/rails/rails/issues/35417
   gem 'webmock'
   gem 'vcr'
   gem 'simplecov'

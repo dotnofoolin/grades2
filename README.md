@@ -6,7 +6,7 @@ A key component is the [hac_adapter](https://github.com/dotnofoolin/hac_adapter)
 
 ## Details
 
-* Developed with Ruby 2.4.3 and Rails 5.1.4
+* Developed with Ruby on Rails
 * PostgreSQL is the database of choice.
 * Assets are managed with webpacker.
 * Bulma is the CSS framework for now.
@@ -14,8 +14,12 @@ A key component is the [hac_adapter](https://github.com/dotnofoolin/hac_adapter)
 
 ## Setup
 
-* Copy config/local_env.yml.example to config/local_env.yml. Enter your credentials. The URL can be picky. This format works best: https://hac40.esp.k12.ar.us/HomeAccess40
+* Copy .env.example to .env. Enter your credentials. The URL can be picky. This format works best: https://hac40.esp.k12.ar.us/HomeAccess40
 * Configure your database in config/database.yml
+
+## Dockerizing the app
+
+See [DOCKER](DOCKER.md)
 
 ## Development
 

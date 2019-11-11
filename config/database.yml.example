@@ -20,6 +20,10 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # Docker specific settings below. Feel free to change or delete these if needed.
+  host: db 
+  username: postgres
+  password:
 
 development:
   <<: *default
@@ -81,5 +85,3 @@ test:
 production:
   <<: *default
   database: grades2_production
-  username: grades2
-  password: <%= ENV['GRADES2_DATABASE_PASSWORD'] %>
