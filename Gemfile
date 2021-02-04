@@ -7,7 +7,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'webpacker'
 # gem 'redis', '~> 3.0'
-gem 'hac_adapter', '1.1.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
+gem 'hac_adapter', '1.2.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
 gem 'rufus-scheduler'
 gem 'dotenv-rails'
 
