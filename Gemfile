@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 6.0.2.1'
-gem 'pg', '~> 0.18'
+gem 'rails', '~> 6.1.4'
+gem 'pg', '~> 1.1'
 gem 'puma'
 gem 'sass-rails'
+gem 'sassc', '2.1.0' # Don't install 2.4.0 or newer. Stupid slow compile/install times. Revisit this later. See: https://github.com/sass/sassc-ruby/issues/189
 gem 'uglifier'
 gem 'webpacker'
-# gem 'redis', '~> 3.0'
-gem 'hac_adapter', '1.2.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
+gem 'hac_adapter', '1.3.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
 gem 'rufus-scheduler'
 gem 'dotenv-rails'
 
 group :test do
-  gem 'rspec-rails', '~> 4.0.0.beta2' # TODO: come back and remove the version lock. See: https://github.com/rails/rails/issues/35417
+  gem 'rspec-rails'
   gem 'webmock'
   gem 'vcr'
   gem 'simplecov'
