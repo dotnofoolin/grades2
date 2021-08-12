@@ -112,3 +112,4 @@ exec sudo su -c 'cd /home/ec2-user/grades2; source "/home/ec2-user/.rvm/scripts/
 * `show hba_file;` to show config file. Edit file and change local/all/all to 'trust', not 'peer'
 * Had to create a role for the app: `create role grades2 with createdb login password 'password';`
 * Getting the pg gem to install on Amazon Linux: https://stackoverflow.com/a/41049917
+* Installing Postgres 11: https://stackoverflow.com/a/57291363

@@ -15,7 +15,6 @@ if rails_env == 'production'
   activate_control_app
 
   workers ENV.fetch("WEB_CONCURRENCY") { 1 }
-  daemonize true
 
   before_fork do
     ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
