@@ -4,6 +4,7 @@ gem 'rails', '~> 6.1.4'
 gem 'pg', '~> 1.1'
 gem 'puma'
 gem 'sass-rails'
+gem 'sassc', '2.1.0' # Don't install 2.4.0 or newer. Stupid slow compile/install times. Revisit this later. See: https://github.com/sass/sassc-ruby/issues/189
 gem 'uglifier'
 gem 'webpacker'
 gem 'hac_adapter', '1.3.0', git: 'https://github.com/dotnofoolin/hac_adapter.git'
